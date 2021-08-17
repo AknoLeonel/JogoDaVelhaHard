@@ -1,0 +1,310 @@
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2;
+  font-family: sans-serif;
+  color: #555;
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 10px;
+}
+
+#main {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#timeup {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: white;
+  /*color:white;*/
+  text-align: center;
+  z-index: 999;
+}
+
+#timeup .content {
+  height: 140px;
+  margin-top: -70px;
+}
+
+#timeup h3 {
+  margin: 20px;
+}
+
+#timeup #nextplayer {
+  height: 30px;
+  width: 100px;
+  margin: auto;
+  background: #acacac;
+  border-radius: 15px;
+  color: white;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+#setup {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2;
+  text-align: center;
+  z-index: 100;
+}
+
+#togame {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 50%;
+  right: 0;
+  margin-top: -15px;
+  display: none;
+  background: #acacac;
+  z-index: 2;
+}
+
+.content {
+  position: relative;
+  top: 50%;
+  margin-top: -120px;
+  height: 240px;
+}
+
+#time {
+  position: relative;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#time > div:first-child {
+  position: relative;
+  margin: auto;
+  display: table !important;
+  z-index: 2;
+}
+
+#timevalue {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 39px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #acacac;
+}
+
+#startgame {
+  height: 30px;
+  width: 80px;
+  margin: auto;
+  background: #acacac;
+  border-radius: 15px;
+  color: white;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+#playfield {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 100%;
+  background: #f2f2f2;
+  z-index: 99;
+}
+
+#tomenu {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  top: 50%;
+  margin-top: -15px;
+  background: #acacac;
+}
+
+.current #timer {
+  top: -10px;
+  bottom: -10px;
+  left: -10px;
+  right: -10px;
+}
+
+#timer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: -1px;
+}
+
+#timer div {
+  position: absolute;
+  background: white;
+}
+
+#timer #top,
+#timer #bottom {
+  height: 1px;
+  width: 100%;
+}
+
+#top {
+  top: 0px;
+  left: 0px;
+}
+
+#bottom {
+  bottom: 0px;
+  right: 0px;
+}
+
+#timer #left,
+#timer #right {
+  height: 100%;
+  width: 1px;
+}
+
+#left {
+  left: 0px;
+  bottom: 0px;
+}
+
+#right {
+  top: 0px;
+  right: 0px;
+}
+
+#grid {
+  position: absolute;
+}
+
+#grid > .result {
+  display: none;
+  z-index: 99;
+}
+
+.container {
+  position: relative;
+  height: 33.33%;
+  width: 33.33%;
+  float: left;
+  border: 10px solid #f2f2f2;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.field {
+  position: absolute;
+  z-index: 2;
+  /*left:30px;
+    top:30px;
+    right:30px;
+    bottom:30px;*/
+}
+
+.result {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: none;
+  background-color: #fff;
+  /*opacity:0.8; */
+  z-index: 2;
+}
+
+.result .info {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: table;
+  display: none;
+  text-align: center;
+}
+
+.square {
+  position: relative;
+  height: 33.33%;
+  width: 33.33%;
+  padding: 10%;
+  float: left;
+  box-sizing: border-box;
+}
+.square.last {
+  z-index: 2;
+}
+
+.square.one div {
+  background: DodgerBlue;
+}
+
+.square.two div {
+  background: Tomato;
+}
+
+.square:hover {
+  opacity: 0.6;
+}
+
+.square div {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+.ripple {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  top: 0;
+  right: 0;
+  background-color: rgba(200, 200, 200, 0.5);
+  border-radius: 100%;
+}
+
+.ripple-animate {
+  animation: ripple 0.4s linear;
+}
+
+@keyframes ripple {
+  100% {
+    transform: scale(1.5);
+    background-color: transparent;
+  }
+}

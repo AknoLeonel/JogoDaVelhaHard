@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo Da Velha</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div id="main">
+        <div id="setup">
+            <div id="togame"></div>
+            <div class="content">
+                <h1>Setup</h1>
+
+                <div id="time">
+                    <input class="knob" data-thickness=".3" data-skin="tron" data-width="120" data-height="100"
+                        data-min="4" data-max="60" data-angleOffset="-125" data-angleArc="250" data-displayInput="false"
+                        data-fgColor="#acacac" data-bgColor="#fff" value="15" readonly />
+                    <div id="timevalue"></div>
+                    <h3>Seconds por turno</h3>
+
+                </div>
+                <div id="startgame">Começar</div>
+            </div>
+        </div>
+        <div id="playfield">
+            <div id="tomenu"></div>
+            <div id="grid" class="currentgrid">
+                <div class="result"></div>
+                <div class="container"></div>
+                <div class="container"></div>
+                <div class="container"></div>
+                <div class="container"></div>
+                <div class="container"></div>
+                <div class="container"></div>
+                <div class="container"></div>
+                <div class="container"></div>
+                <div class="container"></div>
+            </div>
+        </div>
+    </div>
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/jquery.knob/1.2.2/jquery.knob.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js'></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
